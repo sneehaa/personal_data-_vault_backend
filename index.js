@@ -78,6 +78,10 @@ app.get('/api/audit-logs', async (req, res) => {
 
 app.use('/api', require('./routes/authRoutes'));
 
+app.get("/", (req, res) => {
+    res.status(200).send("API by Sneha Adhikari");
+  });
+
 
 // defining port
 const PORT = process.env.PORT;
